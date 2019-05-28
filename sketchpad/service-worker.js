@@ -151,12 +151,12 @@
 //# sourceMappingURL=sw-toolbox.js.map
 
 
-	toolbox.precache(["./","./index.html","sketpad/min/app-loader.min.css?5.1.316","sketpad/min/app-loader.min.js?5.1.316","sketpad/min/app.min.css?5.1.316","sketpad/min/app.min.js?5.1.316","sketpad/min/sketch-api.min.css?5.1.316","sketpad/min/sketch-api.min.js?5.1.316"])
+	toolbox.precache(["./","./index.html","min/app-loader.min.css?5.1.316","min/app-loader.min.js?5.1.316","min/app.min.css?5.1.316","min/app.min.js?5.1.316","min/sketch-api.min.css?5.1.316","min/sketch-api.min.js?5.1.316"])
 
 	toolbox.router.get('', toolbox.fastest)
 	toolbox.router.get('index.html', toolbox.fastest)
-	toolbox.router.get('sketpad/min/(.*)', toolbox.cacheFirst)
-	toolbox.router.get('sketpad/media/(.*)', toolbox.cacheFirst, {
+	toolbox.router.get('min/(.*)', toolbox.cacheFirst)
+	toolbox.router.get('media/(.*)', toolbox.cacheFirst, {
 		cache: {
 			name: 'media-cache-v1',
 			maxEntries: 250
