@@ -130,6 +130,7 @@ console.log('--111--');
 
 <script>
 	void function() {
+			console.log('--AppLoader started--');
 		AppLoader(
 			[
 			/*{"url": "min/sketch-api.min.js?5.1.316", "bytes": 2601356},*/
@@ -137,8 +138,6 @@ console.log('--111--');
 			/*{"url": "min/app.min.js?5.1.316", "bytes": 1763990},
 			{"url": "min/app.min.css?5.1.316","bytes": 15835}*/
 			]).catch(function(err) {
-			
-			console.log('--AppLoader started--');
 				return console.error(err);
 			});
 	}();
@@ -146,7 +145,7 @@ console.log('--111--');
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-
+<!--
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-400768-15"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
@@ -158,7 +157,7 @@ console.log('--111--');
 
 	gtag('config', 'UA-400768-15');
 </script>
-
+-->
 <!--</head>-->
 <!--	<body><h1>sss</h1></body> -->
 <!--</html>-->
