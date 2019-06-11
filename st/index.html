@@ -8,29 +8,29 @@
  
   
   
-#mainMenu {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  border: 2px solid #0066FF;
-  /*border-radius: 20px 5px;*/
-  width: 1150px; /* ширина меню */
-  text-align: left; /*center;*/
-  background-color: #33ADFF;
-}
-#mainMenu li { display: inline; }  
-#mainMenu a {
-  color: #fff;
-  padding: 5px 10px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  /*width: 200px;*/ /* ширина пункта меню */
-}
-#mainMenu a:hover {
-  /*border-radius: 20px 5px;*/
-  background-color: #0066FF;
-}  
+/*#mainMenu {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  list-style-type: none;*/
+/*  border: 2px solid #0066FF;*/
+/**/  /*border-radius: 20px 5px;*/
+/*  width: 1150px;*/ /* ширина меню */
+/*  text-align: left;*/ /*center;*/
+/*  background-color: #33ADFF;*/
+/*}*/
+/*#mainMenu li { display: inline; }*/
+/*#mainMenu a {*/
+/*  color: #fff;*/
+/*  padding: 5px 10px;*/
+/*  text-decoration: none;*/
+/*  font-weight: bold;*/
+/*  display: inline-block;*/
+/**/  /*width: 200px;*/ /* ширина пункта меню */
+/*}*/
+/*#mainMenu a:hover {*/
+/**/  /*border-radius: 20px 5px;*/
+/*  background-color: #0066FF;*/
+/*}  */
   
   
   
@@ -140,8 +140,146 @@ outline-width:0;
 left:0;
 }*/
 /*#nav ul.dd li a:active + ul,#nav ul.dd li a:focus + ul,#nav ul.dd li ul:hover {
-left:140px;*/
+left:140px;
+}*/
+
+ 
+ 
+ 
+/* demo page styles */
+body {
+    background:#eee;
+    margin:0;
+    padding:0;
 }
+.example {
+    background:#fff url(../images/clouds-in-blue-sky.jpg);
+    width:770px;
+    height:570px;
+    border:1px #000 solid;
+    margin:20px auto;
+    padding:15px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+
+/* main menu styles */
+#nav {
+    display:inline-block;
+    width:100%;
+    margin:0px auto;
+    padding:0;
+    background:#335599 url(../images/bg.png) repeat-x 0 -110px;
+
+    border-radius:10px; /*some css3*/
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    box-shadow:0 2px 2px rgba(0,0,0, .5);
+    -moz-box-shadow:0 2px 2px rgba(0,0,0, .5);
+    -webkit-box-shadow:0 2px 2px rgba(0,0,0, .5);
+}
+#nav li {
+    margin:10px;
+    float:left;
+    position:relative;
+    list-style:none;
+}
+#nav a {
+    font-weight:bold;
+    color:#e7e5e5;
+    text-decoration:none;
+    display:block;
+    padding:8px 20px;
+
+    border-radius:10px; /*some css3*/
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    text-shadow:0 2px 2px rgba(0,0,0, .7);
+}
+
+/* selected menu element */
+#nav .current a, #nav li:hover > a {
+    background:#7788aa url(../images/bg.png) repeat-x 0 -20px;
+    color:#000;
+    border-top:1px solid #f8f8f8;
+
+    box-shadow:0 2px 2px rgba(0,0,0, .7); /*some css3*/
+    -moz-box-shadow:0 2px 2px rgba(0,0,0, .7);
+    -webkit-box-shadow:0 2px 2px rgba(0,0,0, .7);
+    text-shadow:0 2px 2px rgba(255,255,255, 0.7);
+}
+
+/* sublevels */
+#nav ul li:hover a, #nav li:hover li a {
+    background:none;
+    border:none;
+    color:#000;
+}
+#nav ul li a:hover {
+    background:#335599 url(../images/bg.png) repeat-x 0 -100px;
+    color:#fff;
+
+    border-radius:10px; /*some css3*/
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    text-shadow:0 2px 2px rgba(0,0,0, 0.7);
+}
+
+#nav ul li:first-child > a {
+    -moz-border-radius-topleft:10px; /*some css3*/
+    -moz-border-radius-topright:10px;
+    -webkit-border-top-left-radius:10px;
+    -webkit-border-top-right-radius:10px;
+}
+#nav ul li:last-child > a {
+    -moz-border-radius-bottomleft:10px; /*some css3*/
+    -moz-border-radius-bottomright:10px;
+    -webkit-border-bottom-left-radius:10px;
+    -webkit-border-bottom-right-radius:10px;
+}
+
+/* drop down */
+#nav li:hover > ul {
+    opacity:1;
+    visibility:visible;
+}
+#nav ul {
+    opacity:0;
+    visibility:hidden;
+    padding:0;
+    width:175px;
+    position:absolute;
+    background:#aabbcc url(../images/bg.png) repeat-x 0 0;
+    border:1px solid #7788aa;
+
+    border-radius:10px; /*some css3*/
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    box-shadow:0 2px 2px rgba(0,0,0, .5);
+    -moz-box-shadow:0 2px 2px rgba(0,0,0, .5);
+    -webkit-box-shadow:0 2px 2px rgba(0,0,0, .5);
+
+    -moz-transition:opacity .25s linear, visibility .1s linear .1s;
+    -webkit-transition:opacity .25s linear, visibility .1s linear .1s;
+    -o-transition:opacity .25s linear, visibility .1s linear .1s;
+    transition:opacity .25s linear, visibility .1s linear .1s;
+}
+#nav ul li {
+    float:none;
+    margin:0;
+}
+#nav ul a {
+    font-weight:normal;
+    text-shadow:0 2px 2px rgba(255,255,255, 0.7);
+}
+#nav ul ul {
+    left:160px;
+    top:0px;
+} 
+ 
+ 
 </style>  
 
 </head>
@@ -151,29 +289,29 @@ left:140px;*/
 <body>
 
 <!--<div class="example">-->
-    <ul id="mainMenu">
-        <li><a href="https://www.script-tutorials.com/">Home</a></li>
+<!--    <ul id="mainMenu">
+        <li><a href="#">Home</a></li>
         <li><a class="fly" href="#" tabindex="1">Tutorials</a>
-<!--            <ul class="dd">
-                <li><a href="https://www.script-tutorials.com/category/html-css/">HTML / CSS</a></li>
+            <ul class="dd">
+                <li><a href="#">HTML / CSS</a></li>
                 <li><a class="fly" href="#" tabindex="1">JS / jQuery</a>
                     <ul>
-                        <li><a href="https://www.script-tutorials.com/category/jquery/">jQuery</a></li>
-                        <li><a href="https://www.script-tutorials.com/category/javascript/">JS</a></li>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">JS</a></li>
                     </ul>
                 </li>
-                <li><a href="https://www.script-tutorials.com/category/php/">PHP</a></li>
-                <li><a href="https://www.script-tutorials.com/category/mysql/">MySQL</a></li>
-                <li><a href="https://www.script-tutorials.com/category/xslt/">XSLT</a></li>
-                <li><a href="https://www.script-tutorials.com/category/ajax/">Ajax</a></li>
-            </ul>-->
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">MySQL</a></li>
+                <li><a href="#">XSLT</a></li>
+                <li><a href="#">Ajax</a></li>
+            </ul>
         </li>
         <li><a class="fly" href="#" tabindex="1">Resources</a>
-<!--            <ul class="dd">
+            <ul class="dd">
                 <li><a class="fly" href="#" tabindex="1">By category</a>
                     <ul>
-                        <li><a href="https://www.script-tutorials.com/category/php/">PHP</a></li>
-                        <li><a href="https://www.script-tutorials.com/category/mysql/">MySQL</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">MySQL</a></li>
                         <li><a class="fly" href="#" tabindex="1">Menu1</a>
                             <ul>
                                 <li><a href="#">Menu1</a></li>
@@ -189,22 +327,69 @@ left:140px;*/
                                 <li><a href="#">Menu4</a></li>
                             </ul>
                         </li>
-                        <li><a href="https://www.script-tutorials.com/category/ajax/">Ajax</a></li>
+                        <li><a href="#">Ajax</a></li>
                     </ul>
                 </li>
                 <li><a class="fly" href="#" tabindex="1">By tag name</a>
                     <ul>
-                        <li><a href="https://www.script-tutorials.com/tag/captcha/">captcha</a></li>
-                        <li><a href="https://www.script-tutorials.com/tag/gallery/">gallery</a></li>
-                        <li><a href="https://www.script-tutorials.com/tag/animation/">animation</a></li>
+                        <li><a href="#">captcha</a></li>
+                        <li><a href="#">gallery</a></li>
+                        <li><a href="#">animation</a></li>
                     </ul>
                 </li>
-            </ul>-->
+            </ul>
         </li>
-        <li><a href="https://www.script-tutorials.com/about/">About</a></li>
-        <li><a href="https://www.script-tutorials.com/click-action-multilevel-css3-dropdown-menu/">Go Back To The Tutorial</a></li>
-    </ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Go Back To The Tutorial</a></li>
+    </ul>-->
 <!--</div>-->
 
+ <div class="example">
+    <ul id="nav">
+        <li class="current"><a href="#">Home</a></li>
+        <li><a href="#">Tutorials</a>
+            <ul>
+                <li><a href="#">HTML / CSS</a></li>
+                <li><a href="#">JS / jQuery</a>
+                    <ul>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">JS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">MySQL</a></li>
+                <li><a href="#">XSLT</a></li>
+                <li><a href="#">Ajax</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Resources</a>
+            <ul>
+                <li><a href="#">By category</a>
+                    <ul>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">MySQL</a></li>
+                        <li><a href="#">XSLT</a></li>
+                        <li><a href="#">Ajax</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">By tag name</a>
+                    <ul>
+                        <li><a href="#">captcha</a></li>
+                        <li><a href="#">gallery</a></li>
+                        <li><a href="#">animation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Go Back To The Tutorial</a></li>
+    </ul>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
 </body>
 </html>
