@@ -165,12 +165,12 @@ body {
 /*    height: 21px; */
     margin: 0px auto;
     padding: 0;
-    background-color: #f8f8f8; /*    background:#335599 url(../images/bg.png) repeat-x 0 -110px;*/  /* фон панели горизонтального меню */
+    background-color: #f8f8f8;
     background-image: linear-gradient(bottom, #808080, white);
     background-image: -o-linear-gradient(bottom, #808080, white);
     background-image: -moz-linear-gradient(bottom, #808080, white);
     background-image: -webkit-linear-gradient(bottom, #808080, white);
-    border-bottom: 1px solid #000000; /*    border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;*/ /* закругление углов панели горизонтального меню */
+    border-bottom: 1px solid #000000;
 }
  
 #nav li {
@@ -189,29 +189,31 @@ body {
     font-size: 12px;
     font-weight: normal;
     color: #000000;
-    text-decoration:none;
-/*    padding: 0px 20px; */ /*8px 20px*/ /* смещение от текста до рамки влияет на выпадающие меню */
+    text-decoration: none;
 }
 
 /* selected menu element */
-#nav .current a, #nav li:hover > a {
-/*    padding: 0px 18px;*/ /*8px 20px*/ /* смещение от текста до рамки влияет на выпадающие меню */
+/*#nav .current a, #nav li:hover > a {*/
+#nav li:hover > a {
     padding-top: 0px;
     padding-right: 19px;
     padding-bottom: 0px;
     padding-left: 19px;
-    color: #000000; /* цвет текста выделенного пункта горизонтального меню */
+    color: #000000;
     border: 1px solid #000000;
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
 }
 
+ 
+ 
 /* sublevels */
 #nav ul li:hover a, #nav li:hover li a {
     background:none;
     border:none;
-    color:#000;
+/*    color:#000;*/
+    color: red;
 }
 #nav ul li a:hover {
     background:#335599 url(../images/bg.png) repeat-x 0 -100px;
