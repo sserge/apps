@@ -202,27 +202,29 @@ body {
     color: #000000;
     border: 1px solid #000000;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
+/*    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;*/
 }
 
  
  
 /* sublevels   Подменю */
+#drop ul li {
+ }
 /*#nav ul li:hover a, #nav li:hover li a {*/
-#nav ul li:hover a {
+/*#nav ul li:hover a {
     background:none;
-    border:none;
+    border:none;*/
 /*    color:#000;*/
-    color: red;
-}
- 
+/*    color: red;
+}*/
+/* 
 #nav li:hover li a {
     background:none;
-    border:none;
+    border:none;*/
 /*    color:#000;*/
-    color: green;
-}
+ /*   color: green;
+}*/
  
  
  
@@ -359,7 +361,7 @@ body {
  <!--       <li class="current"><a href="#">Home</a></li> -->
         <li><a href="#">Home</a></li>
         <li><a href="#">Tutorials</a>
-            <ul>
+            <ul id="drop">
                 <li><a href="#">HTML / CSS</a></li>
                 <li><a href="#">JS / jQuery</a>
                     <ul>
