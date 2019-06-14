@@ -145,24 +145,21 @@ left:140px;
 
  
  
- 
+/*==========================================================================================*/
 /* demo page styles */
 body {
     margin:0;
     padding:0;
 }
-
 .example {
     margin: 0px;
     padding: 0px;
 }
-
-
 /* main menu styles */
 #nav {
     display: inline-block;
     width: 100%;
-/*    height: 21px; */
+    height: 21px;
     margin: 0px auto;
     padding: 0;
     background-color: #f8f8f8;
@@ -172,9 +169,8 @@ body {
     background-image: -webkit-linear-gradient(bottom, #808080, white);
     border-bottom: 1px solid #000000;
 }
- 
 #nav li {
-    margin: 2px 5px; /*10px*/ /* влияет на выпадающие меню */
+    margin: 2px 5px;
     float:left;
     position:relative;
     list-style:none;
@@ -191,9 +187,7 @@ body {
     color: #000000;
     text-decoration: none;
 }
-
 /* selected menu element */
-/*#nav .current a, #nav li:hover > a {*/
 #nav li:hover > a {
     padding-top: 0px;
     padding-right: 19px;
@@ -202,56 +196,35 @@ body {
     color: #000000;
     border: 1px solid #000000;
     border-radius: 6px;
-/*    -moz-border-radius: 6px;
+    -moz-border-radius: 6px;
     -webkit-border-radius: 6px;*/
 }
-
- 
- 
-/* sublevels   Подменю */
-/*#drop ul li {
- }*/
-/*#nav ul li:hover a, #nav li:hover li a {*/
-/*#nav ul li:hover a {
+/* sublevels*/
+#nav ul li:hover a, #nav li:hover li a {
     background:none;
     border:none;*/
-/*    color:#000;*/
-/*    color: red;
-}*/
-/* 
-#nav li:hover li a {
-    background:none;
-    border:none;*/
-/*    color:#000;*/
- /*   color: green;
-}*/
- 
- 
- 
- 
+    color:#000;*/
+}
 #nav ul li a:hover {
     background:#335599 url(../images/bg.png) repeat-x 0 -100px;
     color:#fff;
-
-    border-radius:10px; /*some css3*/
+    border-radius:10px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     text-shadow:0 2px 2px rgba(0,0,0, 0.7);
 }
-
 #nav ul li:first-child > a {
-    -moz-border-radius-topleft:10px; /*some css3*/
+    -moz-border-radius-topleft:10px;
     -moz-border-radius-topright:10px;
     -webkit-border-top-left-radius:10px;
     -webkit-border-top-right-radius:10px;
 }
 #nav ul li:last-child > a {
-    -moz-border-radius-bottomleft:10px; /*some css3*/
+    -moz-border-radius-bottomleft:10px;
     -moz-border-radius-bottomright:10px;
     -webkit-border-bottom-left-radius:10px;
     -webkit-border-bottom-right-radius:10px;
 }
-
 /* drop down */
 #nav li:hover > ul {
     opacity:1;
@@ -265,14 +238,12 @@ body {
     position:absolute;
     background:#aabbcc url(../images/bg.png) repeat-x 0 0;
     border:1px solid #7788aa;
-
-    border-radius:10px; /*some css3*/
+    border-radius:10px;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     box-shadow:0 2px 2px rgba(0,0,0, .5);
     -moz-box-shadow:0 2px 2px rgba(0,0,0, .5);
     -webkit-box-shadow:0 2px 2px rgba(0,0,0, .5);
-
     -moz-transition:opacity .25s linear, visibility .1s linear .1s;
     -webkit-transition:opacity .25s linear, visibility .1s linear .1s;
     -o-transition:opacity .25s linear, visibility .1s linear .1s;
@@ -289,124 +260,68 @@ body {
 #nav ul ul {
     left:160px;
     top:0px;
- background-color: green;
 } 
  
  
 </style>  
-
 </head>
-
-
-
 <body>
 
-<!--<div class="example">-->
-<!--    <ul id="mainMenu">
-        <li><a href="#">Home</a></li>
-        <li><a class="fly" href="#" tabindex="1">Tutorials</a>
-            <ul class="dd">
-                <li><a href="#">HTML / CSS</a></li>
-                <li><a class="fly" href="#" tabindex="1">JS / jQuery</a>
-                    <ul>
-                        <li><a href="#">jQuery</a></li>
-                        <li><a href="#">JS</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">PHP</a></li>
-                <li><a href="#">MySQL</a></li>
-                <li><a href="#">XSLT</a></li>
-                <li><a href="#">Ajax</a></li>
-            </ul>
-        </li>
-        <li><a class="fly" href="#" tabindex="1">Resources</a>
-            <ul class="dd">
-                <li><a class="fly" href="#" tabindex="1">By category</a>
-                    <ul>
-                        <li><a href="#">PHP</a></li>
-                        <li><a href="#">MySQL</a></li>
-                        <li><a class="fly" href="#" tabindex="1">Menu1</a>
-                            <ul>
-                                <li><a href="#">Menu1</a></li>
-                                <li><a href="#">Menu2</a></li>
-                                <li><a class="fly" href="#" tabindex="1">Menu3</a>
-                                    <ul>
-                                        <li><a href="#">Menu31</a></li>
-                                        <li><a href="#">Menu32</a></li>
-                                        <li><a href="#">Menu33</a></li>
-                                        <li><a href="#">Menu34</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Menu4</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Ajax</a></li>
-                    </ul>
-                </li>
-                <li><a class="fly" href="#" tabindex="1">By tag name</a>
-                    <ul>
-                        <li><a href="#">captcha</a></li>
-                        <li><a href="#">gallery</a></li>
-                        <li><a href="#">animation</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Go Back To The Tutorial</a></li>
-    </ul>-->
-<!--</div>-->
-
- <div class="example">
-    <ul id="nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tutorials</a>
-            <ul>
-                <li><a href="#">HTML / CSS</a></li>
-                <li><a href="#">JS / jQuery</a>
-                    <ul>
-                        <li><a href="#">jQuery</a></li>
-                        <li><a href="#">JS</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">PHP</a></li>
-                <li><a href="#">MySQL</a></li>
-                <li><a href="#">XSLT</a></li>
-                <li><a href="#">Ajax</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Resources</a>
-            <ul>
-                <li><a href="#">By category</a>
-                    <ul>
-                        <li><a href="#">PHP</a></li>
-                        <li><a href="#">Мускул</a></li>
-                            <ul>
-                                <li><a href="#">Записать</a></li>
-                                <li><a href="#">Прочитать</a></li>
-                            </ul>
-                        <li><a href="#">XSLT</a></li>
-                        <li><a href="#">Ajax</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">By tag name</a>
-                    <ul>
-                        <li><a href="#">captcha</a></li>
-                        <li><a href="#">gallery</a></li>
-                        <li><a href="#">animation</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Go Back To The Tutorial</a></li>
-    </ul>
-</div>
- 
- 
- 
- 
- 
+ <div class="example">                                        <!--<div class="example">-->
+    <ul id="nav">                                             <!--    <ul id="mainMenu">-->
+        <li><a href="#">Home</a></li>                         <!--        <li><a href="#">Home</a></li>-->
+        <li><a href="#">Tutorials</a>                         <!--        <li><a class="fly" href="#" tabindex="1">Tutorials</a>-->
+            <ul>                                              <!--            <ul class="dd">-->
+                <li><a href="#">HTML / CSS</a></li>           <!--                <li><a href="#">HTML / CSS</a></li>-->
+                <li><a href="#">JS / jQuery</a>               <!--                <li><a class="fly" href="#" tabindex="1">JS / jQuery</a>-->
+                    <ul>                                      <!--                    <ul>-->
+                        <li><a href="#">jQuery</a></li>       <!--                        <li><a href="#">jQuery</a></li>-->
+                        <li><a href="#">JS</a></li>           <!--                        <li><a href="#">JS</a></li>-->
+                    </ul>                                     <!--                    </ul>-->
+                </li>                                         <!--                </li>-->
+                <li><a href="#">PHP</a></li>                  <!--                <li><a href="#">PHP</a></li>-->
+                <li><a href="#">MySQL</a></li>                <!--                <li><a href="#">MySQL</a></li>-->
+                <li><a href="#">XSLT</a></li>                 <!--                <li><a href="#">XSLT</a></li>-->
+                <li><a href="#">Ajax</a></li>                 <!--                <li><a href="#">Ajax</a></li>-->
+            </ul>                                             <!--            </ul>-->
+        </li>                                                 <!--        </li>-->
+        <li><a href="#">Resources</a>                         <!--        <li><a class="fly" href="#" tabindex="1">Resources</a>-->
+            <ul>                                              <!--            <ul class="dd">-->
+                <li><a href="#">By category</a>               <!--                <li><a class="fly" href="#" tabindex="1">By category</a>-->
+                    <ul>                                      <!--                    <ul>-->
+                        <li><a href="#">PHP</a></li>          <!--                        <li><a href="#">PHP</a></li>-->
+                        <li><a href="#">Мускул</a></li>       <!--                        <li><a href="#">MySQL</a></li>-->
+                        <li><a href="#">XSLT</a></li>         <!--                        <li><a class="fly" href="#" tabindex="1">Menu1</a>-->
+                                                              <!--                            <ul>-->
+                                                              <!--                                <li><a href="#">Menu1</a></li>-->
+                                                              <!--                                <li><a href="#">Menu2</a></li>-->
+                                                              <!--                                <li><a class="fly" href="#" tabindex="1">Menu3</a>-->
+                                                              <!--                                    <ul>-->
+                                                              <!--                                        <li><a href="#">Menu31</a></li>-->
+                                                              <!--                                        <li><a href="#">Menu32</a></li>-->
+                                                              <!--                                        <li><a href="#">Menu33</a></li>-->
+                                                              <!--                                        <li><a href="#">Menu34</a></li>-->
+                                                              <!--                                    </ul>-->
+                                                              <!--                                </li>-->
+                                                              <!--                                <li><a href="#">Menu4</a></li>-->
+                                                              <!--                            </ul>-->
+                                                              <!--                        </li>-->
+                        <li><a href="#">Ajax</a></li>         <!--                        <li><a href="#">Ajax</a></li>-->
+                    </ul>                                     <!--                    </ul>-->
+                </li>                                         <!--                </li>-->
+                <li><a href="#">By tag name</a>               <!--                <li><a class="fly" href="#" tabindex="1">By tag name</a>-->
+                    <ul>                                      <!--                    <ul>-->
+                        <li><a href="#">captcha</a></li>      <!--                        <li><a href="#">captcha</a></li>-->
+                        <li><a href="#">gallery</a></li>      <!--                        <li><a href="#">gallery</a></li>-->
+                        <li><a href="#">animation</a></li>    <!--                        <li><a href="#">animation</a></li>-->
+                    </ul>                                     <!--                    </ul>-->
+                </li>                                         <!--                </li>-->
+            </ul>                                             <!--            </ul>-->
+        </li>                                                 <!--        </li>-->
+        <li><a href="#">About</a></li>                        <!--        <li><a href="#">About</a></li>-->
+        <li><a href="#">Go Back To The Tutorial</a></li>      <!--        <li><a href="#">Go Back To The Tutorial</a></li>-->
+    </ul>                                                     <!--    </ul>-->
+</div>                                                        <!--</div>-->
  
 </body>
 </html>
